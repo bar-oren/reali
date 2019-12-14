@@ -33,6 +33,6 @@ public class RetrieveSocialNetworkDataCmd implements Observer{
 
     @Override
     public void updateData(String socialNetworkHeader, JSONAware data) {
-        this.data.put(socialNetworkHeader, data == null ? new JSONObject().toJSONString() : data.toJSONString());
+        this.data.put(socialNetworkHeader, data == null ? "Could not retrieve social network data at this time" : data.toJSONString());
     }
 }
